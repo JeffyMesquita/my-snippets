@@ -1,0 +1,94 @@
+{
+    "styles.ts": {
+      "prefix": "tsstyle",
+      "body": [
+        "import { StyleSheet } from 'react-native';",
+        "",
+        "export const styles = StyleSheet.create({",
+        "\tcontainer: {",
+        "\t\t$1",
+        "\t},",
+        "})"
+      ],
+      "description": "StyleSheet Básico.ts"
+    },
+  
+    "Jest describe": {
+      "prefix": "describe",
+      "body": [
+        "describe('$1', () => {",
+        "\t",
+        "\tit('should be able $2', () => {",
+        "\t\t$3",
+        "\t});",
+        "});"
+      ],
+      "description": "Jest describe Basic"
+    },
+  
+    "Jest beforeEach": {
+      "prefix": "beforeEach",
+      "body": ["beforeEach(() => {", "\t$2", "});"],
+      "description": "Jest beforeEach"
+    },
+  
+    "Jest describe with beforeEach": {
+      "prefix": "describe",
+      "body": [
+        "describe('$1', () => {",
+        "\t",
+        "\tbeforeEach(() => {",
+        "\t\t$2",
+        "\t});",
+        "\t",
+        "\tit('should be able $3', () => {",
+        "\t\t$4",
+        "\t});",
+        "});"
+      ],
+      "description": "Jest describe with beforeEach"
+    },
+  
+    "Jest it": {
+      "prefix": "it should",
+      "body": ["it('should be able $1', () => {", "\t$2", "});"],
+      "description": "Jest it"
+    },
+  
+    "Jest it async": {
+      "prefix": "it should",
+      "body": ["it('should be able $1', async () => {", "\t$2", "});"],
+      "description": "Jest it async"
+    },
+  
+    "UseCase Basic": {
+      "prefix": "useCase Basic",
+      "body": [
+        "",
+        "",
+        "",
+        "export class ${TM_DIRECTORY/.*[\\\\\\/](.*)$/$1/}UseCase {",
+        "\t",
+        "\tasync execute(): Promise<void>{}",
+        "};"
+      ],
+      "description": "UseCase Basic"
+    },
+  
+    "Controller Basic": {
+      "prefix": "controller Basic",
+      "body": [
+        "import { Request, Response} from 'express';",
+        "",
+        "",
+        "export class ${TM_DIRECTORY/.*[\\\\\\/](.*)$/$1/}Controller {",
+        "\t",
+        "\tasync handle(request: Request, response: Response) {",
+        "\t",
+        "\t\t};",
+        "};"
+      ],
+      "description": "Controller Basic"
+    }
+  }
+  
